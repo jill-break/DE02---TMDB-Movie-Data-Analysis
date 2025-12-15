@@ -1,0 +1,9 @@
+pandas
+requests
+matplotlib
+seaborn
+python-dotenv
+ipykernel
+tabulate
+numpy
+logging
