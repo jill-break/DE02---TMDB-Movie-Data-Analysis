@@ -44,6 +44,19 @@ logger.info("Calculated KPIs: profit_musd and roi")
 
 
 def print_ranking(title, df, sort_col, ascending=False, top_n=1, cols_to_show=None):
+    """
+    Prints a ranking of movies based on a specified column, with optional formatting.
+
+    :param title: Title of the ranking to display.
+    :param df: DataFrame containing movie data.
+    :param sort_col: Column name to use for sorting the ranking.
+    :param ascending: Boolean indicating the sort order. 
+                      If True, sorts in ascending order; otherwise, descending. Default is False.
+    :param top_n: Number of top entries to display. Default is 1.
+    :param cols_to_show: List of columns to include in the output. 
+                         If None, defaults to ['title', 'budget_musd', 'revenue_musd', 
+                         'profit_musd', 'roi', 'vote_average'].
+    """
     if cols_to_show is None:
         cols_to_show = ['title', 'budget_musd', 'revenue_musd',
                         'profit_musd', 'roi', 'vote_average']
@@ -110,6 +123,14 @@ logger.info("Completed movie rankings")
 
 
 def get_cast(credits_data):
+    """
+    Extracts the top 5 cast members' names from the credits data.
+
+    :param credits_data: A dictionary containing cast information with a 'cast' key 
+                         that holds a list of cast members, each with a 'name' field.
+    :return: A string containing the names of the top 5 cast members, separated by '|', 
+             or NaN if the data is invalid or the 'cast' key is missing.
+    """
     # Extracts top 5 actors from the credits dictionary.
     if isinstance(credits_data, dict) and 'cast' in credits_data:
         actors = [x['name'] for x in credits_data['cast'][:5]]
@@ -118,6 +139,14 @@ def get_cast(credits_data):
 
 
 def get_director(credits_data):
+    """
+    Extracts the director's name(s) from the credits data.
+
+    :param credits_data: A dictionary containing crew information with a 'crew' key 
+                         that holds a list of crew members, each with 'name' and 'job' fields.
+    :return: A string containing the name(s) of the director(s), separated by '|', 
+             or an empty string if no director is found.
+    """
     # Extracts the Director's name from the credits dictionary.
     if isinstance(credits_data, dict) and 'crew' in credits_data:
         directors = [x['name']
@@ -138,6 +167,19 @@ print(df_movie[['title', 'director', 'cast']].head(3))
 
 
 def rank_movies(df, criteria_col, ascending=False, top_n=5, show_cols=None):
+    """
+    Docstring for rank_movies
+    
+    :param df: DataFrame containing movie data.
+    :param criteria_col: Column name to use for ranking the movies.
+    :param ascending: Boolean indicating the sort order. 
+                      If True, sorts in ascending order; otherwise, descending. Default is False.
+    :param top_n: Number of top movies to return. Default is 5.
+    :param show_cols: List of columns to include in the output. 
+                      If None, defaults to ['title', criteria_col, 'genres', 'director', 'cast'].
+
+    :return: DataFrame containing the top-ranked movies based on the specified criteria.
+    """
     if show_cols is None:
         show_cols = ['title', criteria_col, 'genres', 'director', 'cast']
 
@@ -173,6 +215,12 @@ df_movie = pd.merge(df_clean, df_credits, on='id', how='left')
 
 
 def get_cast(credits_data):
+    """
+    Docstring for get_cast
+    
+    :param credits_data:  A dictionary containing cast information with a 'cast' key that
+    holds a list of cast members, each with a 'name' field.
+    """
     if isinstance(credits_data, dict) and 'cast' in credits_data:
         actors = [x['name'] for x in credits_data['cast'][:5]]
         return "|".join(actors)
@@ -180,6 +228,12 @@ def get_cast(credits_data):
 
 
 def get_director(credits_data):
+    """
+    Docstring for get_director
+    
+    :param credits_data: A dictionary containing crew information with a 'crew' key that
+    holds a list of crew members, each with 'name' and 'job' fields.
+    """
     if isinstance(credits_data, dict) and 'crew' in credits_data:
         directors = [x['name']
                      for x in credits_data['crew'] if x.get('job') == 'Director']
