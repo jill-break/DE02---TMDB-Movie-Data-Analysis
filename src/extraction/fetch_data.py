@@ -6,11 +6,15 @@ import logging
 import time
 
 # Configure logging
+logs_dir = os.path.join(os.path.dirname(__file__), "../../logs")
+os.makedirs(logs_dir, exist_ok=True)
+log_file = os.path.join(logs_dir, "fetch_data.log")
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(name)s - %(message)s',
     handlers=[
-        logging.StreamHandler()  # Console output
+        logging.StreamHandler(),  # Console output
+        logging.FileHandler(log_file)  # File output
     ]
 )
 logger = logging.getLogger(__name__)
@@ -48,6 +52,7 @@ for movie_id in movie_ids:
     else:
         logger.warning(
             f"Failed to fetch movie {movie_id}: {response.status_code}")
+    time.sleep(0.25)  # Rate limiting: 4 requests per second
 logger.info(f"Fetched data for {len(selected_movie_ids)} movies")
 
 # Store data as a Pandas DataFrame

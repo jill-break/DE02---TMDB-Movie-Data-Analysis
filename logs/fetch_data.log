@@ -1,0 +1,25 @@
+2025-12-15 14:28:00,315 - INFO - __main__ - Starting fetch_data.py script
+2025-12-15 14:28:00,316 - INFO - __main__ - API key loaded successfully
+2025-12-15 14:28:00,316 - INFO - __main__ - Starting to fetch data for 18 movies
+2025-12-15 14:28:22,224 - INFO - __main__ - Successfully fetched movie ID 299534
+2025-12-15 14:28:23,072 - INFO - __main__ - Successfully fetched movie ID 19995
+2025-12-15 14:28:44,808 - INFO - __main__ - Successfully fetched movie ID 140607
+2025-12-15 14:28:45,473 - INFO - __main__ - Successfully fetched movie ID 299536
+2025-12-15 14:28:47,197 - INFO - __main__ - Successfully fetched movie ID 597
+2025-12-15 14:28:48,038 - INFO - __main__ - Successfully fetched movie ID 135397
+2025-12-15 14:29:09,876 - INFO - __main__ - Successfully fetched movie ID 420818
+2025-12-15 14:29:10,765 - INFO - __main__ - Successfully fetched movie ID 24428
+2025-12-15 14:29:32,410 - INFO - __main__ - Successfully fetched movie ID 168259
+2025-12-15 14:29:33,072 - INFO - __main__ - Successfully fetched movie ID 99861
+2025-12-15 14:29:33,749 - INFO - __main__ - Successfully fetched movie ID 284054
+2025-12-15 14:29:34,480 - INFO - __main__ - Successfully fetched movie ID 12445
+2025-12-15 14:29:35,308 - INFO - __main__ - Successfully fetched movie ID 181808
+2025-12-15 14:29:35,971 - INFO - __main__ - Successfully fetched movie ID 330457
+2025-12-15 14:29:36,614 - INFO - __main__ - Successfully fetched movie ID 351286
+2025-12-15 14:29:58,311 - INFO - __main__ - Successfully fetched movie ID 109445
+2025-12-15 14:29:58,890 - INFO - __main__ - Successfully fetched movie ID 321612
+2025-12-15 14:29:59,603 - INFO - __main__ - Successfully fetched movie ID 260513
+2025-12-15 14:29:59,854 - INFO - __main__ - Fetched data for 18 movies
+2025-12-15 14:29:59,860 - INFO - __main__ - Created DataFrame with 18 rows and 27 columns
+2025-12-15 14:29:59,881 - INFO - __main__ - Saved raw data to c:\Users\CourageDei\Desktop\Moodle\DE\DE02\src\extraction\../../data/raw\movies.json
+2025-12-15 14:29:59,881 - INFO - __main__ - fetch_data.py completed successfully in 119.57 seconds

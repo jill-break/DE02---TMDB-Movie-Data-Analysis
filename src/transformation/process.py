@@ -5,11 +5,15 @@ import logging
 import time
 
 # Configure logging
+logs_dir = os.path.join(os.path.dirname(__file__), "../../logs")
+os.makedirs(logs_dir, exist_ok=True)
+log_file = os.path.join(logs_dir, "process.log")
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(name)s - %(message)s',
     handlers=[
-        logging.StreamHandler()
+        logging.StreamHandler(),
+        logging.FileHandler(log_file)
     ]
 )
 logger = logging.getLogger(__name__)

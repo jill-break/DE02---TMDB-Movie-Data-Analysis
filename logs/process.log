@@ -1,0 +1,7 @@
+2025-12-15 14:30:42,893 - INFO - __main__ - Starting process.py script
+2025-12-15 14:30:42,930 - INFO - __main__ - Loaded raw data from c:\Users\CourageDei\Desktop\Moodle\DE\DE02\src\transformation\../../data/raw\movies.json with 18 rows
+2025-12-15 14:30:42,934 - INFO - __main__ - Dropped irrelevant columns: ['adult', 'imdb_id', 'original_title', 'video', 'homepage']
+2025-12-15 14:30:42,936 - INFO - __main__ - Extracted and cleaned JSON-like columns: ['belongs_to_collection', 'genres', 'spoken_languages', 'production_countries', 'production_companies', 'credits']
+2025-12-15 14:30:42,941 - INFO - __main__ - Converted column data types
+2025-12-15 14:30:42,969 - INFO - __main__ - Filtered to 18 released movies
+2025-12-15 14:30:43,005 - INFO - __main__ - process.py completed successfully in 0.11 seconds
