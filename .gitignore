@@ -20,4 +20,4 @@ __pycache__/
 
 .pytest_cache/
 
-notebooks/*tmdb.ipynb
+notebook/tmdb.ipynb
