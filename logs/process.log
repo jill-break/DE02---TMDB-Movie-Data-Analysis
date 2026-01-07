@@ -5,3 +5,13 @@
 2025-12-15 14:30:42,941 - INFO - __main__ - Converted column data types
 2025-12-15 14:30:42,969 - INFO - __main__ - Filtered to 18 released movies
 2025-12-15 14:30:43,005 - INFO - __main__ - process.py completed successfully in 0.11 seconds
+2025-12-15 17:35:00,450 - INFO - __main__ - Starting process.py script
+2025-12-15 17:35:00,541 - INFO - __main__ - Loaded raw data from c:\Users\CourageDei\Desktop\Moodle\DE\DE02\src\transformation\../../data/raw\movies.json with 18 rows
+2025-12-15 18:26:19,210 - INFO - __main__ - Starting process.py script
+2025-12-15 18:26:19,302 - INFO - __main__ - Loaded raw data from c:\Users\CourageDei\Desktop\Moodle\DE\DE02\src\transformation\../../data/raw\movies.json with 18 rows
+2025-12-16 07:32:24,636 - INFO - __main__ - Starting process.py script
+2025-12-16 07:32:24,694 - INFO - __main__ - Loaded raw data from c:\Users\CourageDei\Desktop\Moodle\DE\DE02\src\transformation\../../data/raw\movies.json with 18 rows
+2025-12-16 08:01:18,226 - INFO - __main__ - Starting process.py script
+2025-12-16 08:01:18,298 - INFO - __main__ - Loaded raw data from c:\Users\CourageDei\Desktop\Moodle\DE\DE02\src\transformation\../../data/raw\movies.json with 18 rows
+2025-12-16 08:41:04,735 - INFO - __main__ - Starting process.py script
+2025-12-16 08:41:04,992 - INFO - __main__ - Loaded raw data from c:\Users\CourageDei\Desktop\Moodle\DE\DE02\src\transformation\../../data/raw\movies.json with 18 rows

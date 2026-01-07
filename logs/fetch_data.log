@@ -23,3 +23,313 @@
 2025-12-15 14:29:59,860 - INFO - __main__ - Created DataFrame with 18 rows and 27 columns
 2025-12-15 14:29:59,881 - INFO - __main__ - Saved raw data to c:\Users\CourageDei\Desktop\Moodle\DE\DE02\src\extraction\../../data/raw\movies.json
 2025-12-15 14:29:59,881 - INFO - __main__ - fetch_data.py completed successfully in 119.57 seconds
+2025-12-15 15:25:05,189 - INFO - src.extraction.fetch_data - Starting fetch_data.py script
+2025-12-15 15:25:05,192 - INFO - src.extraction.fetch_data - API key loaded successfully
+2025-12-15 15:25:05,193 - INFO - src.extraction.fetch_data - Starting to fetch data for 18 movies
+2025-12-15 15:25:06,122 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 299534
+2025-12-15 15:25:06,859 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 19995
+2025-12-15 15:25:07,663 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 140607
+2025-12-15 15:25:08,420 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 299536
+2025-12-15 15:25:09,064 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 597
+2025-12-15 15:25:09,755 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 135397
+2025-12-15 15:25:10,398 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 420818
+2025-12-15 15:25:11,153 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 24428
+2025-12-15 15:25:11,780 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 168259
+2025-12-15 15:25:12,464 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 99861
+2025-12-15 15:25:13,105 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 284054
+2025-12-15 15:25:13,810 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 12445
+2025-12-15 15:25:14,463 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 181808
+2025-12-15 15:25:15,074 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 330457
+2025-12-15 15:25:15,731 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 351286
+2025-12-15 15:25:16,343 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 109445
+2025-12-15 15:25:16,945 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 321612
+2025-12-15 15:25:17,551 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 260513
+2025-12-15 15:25:17,803 - INFO - src.extraction.fetch_data - Fetched data for 18 movies
+2025-12-15 15:25:17,806 - INFO - src.extraction.fetch_data - Created DataFrame with 18 rows and 27 columns
+2025-12-15 15:25:17,838 - INFO - src.extraction.fetch_data - Saved raw data to c:\Users\CourageDei\Desktop\Moodle\DE\DE02\notebook\..\src\extraction\../../data/raw\movies.json
+2025-12-15 15:25:17,839 - INFO - src.extraction.fetch_data - fetch_data.py completed successfully in 12.65 seconds
+2025-12-15 15:29:06,705 - INFO - src.transformation.analysis - Starting analysis.py script
+2025-12-15 15:29:06,747 - INFO - src.transformation.analysis - Loaded cleaned data from c:\Users\CourageDei\Desktop\Moodle\DE\DE02\notebook\..\src\transformation\../../data/processed\movies_clean.csv with 18 rows
+2025-12-15 15:29:06,753 - INFO - src.transformation.analysis - Calculated KPIs: profit_musd and roi
+2025-12-15 15:29:06,928 - INFO - src.transformation.analysis - Completed movie rankings
+2025-12-15 15:29:07,183 - INFO - src.transformation.analysis - Completed franchise and director analysis
+2025-12-15 15:29:07,184 - INFO - src.transformation.analysis - analysis.py completed successfully in 0.48 seconds
+2025-12-15 15:30:41,588 - INFO - src.visualization - Starting visualization.py script
+2025-12-15 15:30:41,595 - INFO - src.visualization - Loaded cleaned data from c:\Users\CourageDei\Desktop\Moodle\DE\DE02\notebook\..\src\../data/processed\movies_clean.csv with 18 rows
+2025-12-15 15:30:41,616 - INFO - src.visualization - Prepared data for visualization
+2025-12-15 15:30:42,057 - INFO - src.visualization - Generated Revenue vs. Budget scatter plot
+2025-12-15 15:30:42,543 - INFO - src.visualization - Generated ROI Distribution by Genre bar chart
+2025-12-15 15:30:42,564 - INFO - src.visualization - Generated ROI Distribution by Genre bar chart
+2025-12-15 15:30:42,891 - INFO - src.visualization - Generated Popularity vs. Rating scatter plot
+2025-12-15 15:30:45,066 - INFO - src.visualization - Generated Yearly Trends line chart
+2025-12-15 15:30:46,149 - INFO - src.visualization - Generated Franchise vs. Standalone bar chart
+2025-12-15 15:30:46,151 - INFO - src.visualization - visualization.py completed successfully in 4.56 seconds
+2025-12-15 16:52:57,439 - INFO - src.extraction.fetch_data - Starting fetch_data.py script
+2025-12-15 16:52:57,444 - INFO - src.extraction.fetch_data - API key loaded successfully
+2025-12-15 16:52:57,445 - INFO - src.extraction.fetch_data - Starting to fetch data for 18 movies
+2025-12-15 16:52:58,132 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 299534
+2025-12-15 16:52:58,932 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 19995
+2025-12-15 16:52:59,651 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 140607
+2025-12-15 16:53:00,481 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 299536
+2025-12-15 16:53:01,072 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 597
+2025-12-15 16:53:01,764 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 135397
+2025-12-15 16:53:23,533 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 420818
+2025-12-15 16:53:24,305 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 24428
+2025-12-15 16:53:25,018 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 168259
+2025-12-15 16:53:46,762 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 99861
+2025-12-15 16:53:47,443 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 284054
+2025-12-15 16:53:48,046 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 12445
+2025-12-15 16:53:48,726 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 181808
+2025-12-15 16:53:49,367 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 330457
+2025-12-15 16:53:50,071 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 351286
+2025-12-15 16:54:11,947 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 109445
+2025-12-15 16:54:12,853 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 321612
+2025-12-15 16:54:13,525 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 260513
+2025-12-15 16:54:13,777 - INFO - src.extraction.fetch_data - Fetched data for 18 movies
+2025-12-15 16:54:13,790 - INFO - src.extraction.fetch_data - Created DataFrame with 18 rows and 27 columns
+2025-12-15 16:54:13,862 - INFO - src.extraction.fetch_data - Saved raw data to c:\Users\CourageDei\Desktop\Moodle\DE\DE02\notebook\..\src\extraction\../../data/raw\movies.json
+2025-12-15 16:54:13,865 - INFO - src.extraction.fetch_data - fetch_data.py completed successfully in 76.42 seconds
+2025-12-15 16:55:51,018 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 299534
+2025-12-15 16:56:12,856 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 19995
+2025-12-15 17:02:06,767 - INFO - src.transformation.process - Starting process.py script
+2025-12-15 17:02:06,937 - INFO - src.transformation.process - Loaded raw data from c:\Users\CourageDei\Desktop\Moodle\DE\DE02\notebook\..\src\transformation\../../data/raw\movies.json with 18 rows
+2025-12-15 17:03:08,428 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 299534
+2025-12-15 17:03:09,156 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 19995
+2025-12-15 17:03:09,799 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 140607
+2025-12-15 17:03:10,549 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 299536
+2025-12-15 17:03:11,172 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 597
+2025-12-15 17:03:11,821 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 135397
+2025-12-15 17:03:12,453 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 420818
+2025-12-15 17:03:13,224 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 24428
+2025-12-15 17:03:13,834 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 168259
+2025-12-15 17:03:14,583 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 99861
+2025-12-15 17:03:15,244 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 284054
+2025-12-15 17:03:15,896 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 12445
+2025-12-15 17:03:16,537 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 181808
+2025-12-15 17:03:17,134 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 330457
+2025-12-15 17:03:17,788 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 351286
+2025-12-15 17:03:18,427 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 109445
+2025-12-15 17:03:19,087 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 321612
+2025-12-15 17:03:19,727 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 260513
+2025-12-15 17:03:19,979 - INFO - src.extraction.fetch_data - Fetched data for 38 movies
+2025-12-15 17:03:19,985 - INFO - src.extraction.fetch_data - Created DataFrame with 38 rows and 27 columns
+2025-12-15 17:03:20,117 - INFO - src.extraction.fetch_data - Saved raw data to c:\Users\CourageDei\Desktop\Moodle\DE\DE02\notebook\..\src\extraction\../../data/raw\movies.json
+2025-12-15 17:03:20,119 - INFO - src.extraction.fetch_data - fetch_data.py completed successfully in 622.68 seconds
+2025-12-15 17:03:43,138 - INFO - src.transformation.analysis - Starting analysis.py script
+2025-12-15 17:03:43,173 - INFO - src.transformation.analysis - Loaded cleaned data from c:\Users\CourageDei\Desktop\Moodle\DE\DE02\notebook\..\src\transformation\../../data/processed\movies_clean.csv with 18 rows
+2025-12-15 17:03:43,177 - INFO - src.transformation.analysis - Calculated KPIs: profit_musd and roi
+2025-12-15 17:03:43,274 - INFO - src.transformation.analysis - Completed movie rankings
+2025-12-15 17:03:43,615 - INFO - src.transformation.analysis - Completed franchise and director analysis
+2025-12-15 17:03:43,617 - INFO - src.transformation.analysis - analysis.py completed successfully in 0.48 seconds
+2025-12-15 17:04:00,566 - INFO - src.transformation.process - Dropped irrelevant columns: ['adult', 'imdb_id', 'original_title', 'video', 'homepage']
+2025-12-15 17:04:00,574 - INFO - src.transformation.process - Extracted and cleaned JSON-like columns: ['belongs_to_collection', 'genres', 'spoken_languages', 'production_countries', 'production_companies', 'credits']
+2025-12-15 17:04:00,589 - INFO - src.transformation.process - Converted column data types
+2025-12-15 17:04:00,622 - INFO - src.transformation.process - Filtered to 18 released movies
+2025-12-15 17:04:00,767 - INFO - src.transformation.process - process.py completed successfully in 114.00 seconds
+2025-12-15 17:04:19,321 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 299534
+2025-12-15 17:04:20,073 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 19995
+2025-12-15 17:04:20,728 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 140607
+2025-12-15 17:04:21,477 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 299536
+2025-12-15 17:04:22,102 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 597
+2025-12-15 17:04:22,735 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 135397
+2025-12-15 17:04:23,350 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 420818
+2025-12-15 17:04:24,141 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 24428
+2025-12-15 17:04:24,774 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 168259
+2025-12-15 17:04:25,489 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 99861
+2025-12-15 17:04:26,141 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 284054
+2025-12-15 17:04:26,771 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 12445
+2025-12-15 17:04:27,388 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 181808
+2025-12-15 17:04:27,978 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 330457
+2025-12-15 17:04:28,603 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 351286
+2025-12-15 17:04:29,223 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 109445
+2025-12-15 17:04:29,848 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 321612
+2025-12-15 17:04:30,464 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 260513
+2025-12-15 17:04:30,717 - INFO - src.extraction.fetch_data - Fetched data for 56 movies
+2025-12-15 17:04:30,723 - INFO - src.extraction.fetch_data - Created DataFrame with 56 rows and 27 columns
+2025-12-15 17:04:30,857 - INFO - src.extraction.fetch_data - Saved raw data to c:\Users\CourageDei\Desktop\Moodle\DE\DE02\notebook\..\src\extraction\../../data/raw\movies.json
+2025-12-15 17:04:30,859 - INFO - src.extraction.fetch_data - fetch_data.py completed successfully in 693.42 seconds
+2025-12-15 17:05:53,508 - INFO - src.transformation.process - Dropped irrelevant columns: ['adult', 'imdb_id', 'original_title', 'video', 'homepage']
+2025-12-15 17:05:53,515 - INFO - src.transformation.process - Extracted and cleaned JSON-like columns: ['belongs_to_collection', 'genres', 'spoken_languages', 'production_countries', 'production_companies', 'credits']
+2025-12-15 17:05:53,527 - INFO - src.transformation.process - Converted column data types
+2025-12-15 17:05:53,570 - INFO - src.transformation.process - Filtered to 18 released movies
+2025-12-15 17:05:53,691 - INFO - src.transformation.process - process.py completed successfully in 226.92 seconds
+2025-12-15 17:15:20,503 - INFO - src.extraction.fetch_data - Starting fetch_data.py script
+2025-12-15 17:15:20,526 - INFO - src.extraction.fetch_data - API key loaded successfully
+2025-12-15 17:15:20,528 - INFO - src.extraction.fetch_data - Starting to fetch data for 18 movies
+2025-12-15 17:15:21,137 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 299534
+2025-12-15 17:15:21,853 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 19995
+2025-12-15 17:15:22,486 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 140607
+2025-12-15 17:15:23,204 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 299536
+2025-12-15 17:15:23,859 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 597
+2025-12-15 17:15:24,524 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 135397
+2025-12-15 17:15:25,150 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 420818
+2025-12-15 17:15:25,884 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 24428
+2025-12-15 17:15:26,496 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 168259
+2025-12-15 17:15:27,207 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 99861
+2025-12-15 17:15:27,861 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 284054
+2025-12-15 17:15:28,480 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 12445
+2025-12-15 17:15:29,098 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 181808
+2025-12-15 17:15:29,714 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 330457
+2025-12-15 17:15:30,354 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 351286
+2025-12-15 17:15:31,021 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 109445
+2025-12-15 17:15:31,639 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 321612
+2025-12-15 17:15:32,285 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 260513
+2025-12-15 17:15:32,538 - INFO - src.extraction.fetch_data - Fetched data for 18 movies
+2025-12-15 17:15:32,544 - INFO - src.extraction.fetch_data - Created DataFrame with 18 rows and 27 columns
+2025-12-15 17:15:32,596 - INFO - src.extraction.fetch_data - Saved raw data to c:\Users\CourageDei\Desktop\Moodle\DE\DE02\notebook\..\src\extraction\../../data/raw\movies.json
+2025-12-15 17:15:32,598 - INFO - src.extraction.fetch_data - fetch_data.py completed successfully in 12.09 seconds
+2025-12-15 17:15:44,238 - INFO - src.transformation.process - Starting process.py script
+2025-12-15 17:15:44,333 - INFO - src.transformation.process - Loaded raw data from c:\Users\CourageDei\Desktop\Moodle\DE\DE02\notebook\..\src\transformation\../../data/raw\movies.json with 18 rows
+2025-12-15 17:15:44,344 - INFO - src.transformation.process - Dropped irrelevant columns: ['adult', 'imdb_id', 'original_title', 'video', 'homepage']
+2025-12-15 17:15:44,350 - INFO - src.transformation.process - Extracted and cleaned JSON-like columns: ['belongs_to_collection', 'genres', 'spoken_languages', 'production_countries', 'production_companies', 'credits']
+2025-12-15 17:15:44,361 - INFO - src.transformation.process - Converted column data types
+2025-12-15 17:15:44,406 - INFO - src.transformation.process - Filtered to 18 released movies
+2025-12-15 17:15:44,468 - INFO - src.transformation.process - process.py completed successfully in 0.23 seconds
+2025-12-15 17:15:48,789 - INFO - src.transformation.analysis - Starting analysis.py script
+2025-12-15 17:15:48,797 - INFO - src.transformation.analysis - Loaded cleaned data from c:\Users\CourageDei\Desktop\Moodle\DE\DE02\notebook\..\src\transformation\../../data/processed\movies_clean.csv with 18 rows
+2025-12-15 17:15:48,801 - INFO - src.transformation.analysis - Calculated KPIs: profit_musd and roi
+2025-12-15 17:15:48,886 - INFO - src.transformation.analysis - Completed movie rankings
+2025-12-15 17:15:49,070 - INFO - src.transformation.analysis - Completed franchise and director analysis
+2025-12-15 17:15:49,071 - INFO - src.transformation.analysis - analysis.py completed successfully in 0.28 seconds
+2025-12-15 17:17:02,046 - INFO - src.extraction.fetch_data - Starting fetch_data.py script
+2025-12-15 17:17:02,052 - INFO - src.extraction.fetch_data - API key loaded successfully
+2025-12-15 17:17:02,053 - INFO - src.extraction.fetch_data - Starting to fetch data for 18 movies
+2025-12-15 17:17:02,708 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 299534
+2025-12-15 17:17:03,454 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 19995
+2025-12-15 17:17:04,101 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 140607
+2025-12-15 17:17:04,830 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 299536
+2025-12-15 17:17:05,476 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 597
+2025-12-15 17:17:06,112 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 135397
+2025-12-15 17:17:06,700 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 420818
+2025-12-15 17:17:07,455 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 24428
+2025-12-15 17:17:08,097 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 168259
+2025-12-15 17:17:08,815 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 99861
+2025-12-15 17:17:09,483 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 284054
+2025-12-15 17:17:10,112 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 12445
+2025-12-15 17:17:10,725 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 181808
+2025-12-15 17:17:11,359 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 330457
+2025-12-15 17:17:11,968 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 351286
+2025-12-15 17:17:12,614 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 109445
+2025-12-15 17:17:13,230 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 321612
+2025-12-15 17:17:13,842 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 260513
+2025-12-15 17:17:14,094 - INFO - src.extraction.fetch_data - Fetched data for 18 movies
+2025-12-15 17:17:14,097 - INFO - src.extraction.fetch_data - Created DataFrame with 18 rows and 27 columns
+2025-12-15 17:17:14,140 - INFO - src.extraction.fetch_data - Saved raw data to c:\Users\CourageDei\Desktop\Moodle\DE\DE02\notebook\..\src\extraction\../../data/raw\movies.json
+2025-12-15 17:17:14,143 - INFO - src.extraction.fetch_data - fetch_data.py completed successfully in 12.09 seconds
+2025-12-15 17:17:23,967 - INFO - src.transformation.process - Starting process.py script
+2025-12-15 17:17:24,059 - INFO - src.transformation.process - Loaded raw data from c:\Users\CourageDei\Desktop\Moodle\DE\DE02\notebook\..\src\transformation\../../data/raw\movies.json with 18 rows
+2025-12-15 17:17:24,066 - INFO - src.transformation.process - Dropped irrelevant columns: ['adult', 'imdb_id', 'original_title', 'video', 'homepage']
+2025-12-15 17:17:24,070 - INFO - src.transformation.process - Extracted and cleaned JSON-like columns: ['belongs_to_collection', 'genres', 'spoken_languages', 'production_countries', 'production_companies', 'credits']
+2025-12-15 17:17:24,080 - INFO - src.transformation.process - Converted column data types
+2025-12-15 17:17:24,168 - INFO - src.transformation.process - Filtered to 18 released movies
+2025-12-15 17:17:24,337 - INFO - src.transformation.process - process.py completed successfully in 0.37 seconds
+2025-12-15 17:17:30,272 - INFO - src.transformation.analysis - Starting analysis.py script
+2025-12-15 17:17:30,279 - INFO - src.transformation.analysis - Loaded cleaned data from c:\Users\CourageDei\Desktop\Moodle\DE\DE02\notebook\..\src\transformation\../../data/processed\movies_clean.csv with 18 rows
+2025-12-15 17:17:30,283 - INFO - src.transformation.analysis - Calculated KPIs: profit_musd and roi
+2025-12-15 17:17:30,361 - INFO - src.transformation.analysis - Completed movie rankings
+2025-12-15 17:17:30,552 - INFO - src.transformation.analysis - Completed franchise and director analysis
+2025-12-15 17:17:30,554 - INFO - src.transformation.analysis - analysis.py completed successfully in 0.28 seconds
+2025-12-15 17:21:44,402 - INFO - src.extraction.fetch_data - Starting fetch_data.py script
+2025-12-15 17:21:44,407 - INFO - src.extraction.fetch_data - API key loaded successfully
+2025-12-15 17:21:44,408 - INFO - src.extraction.fetch_data - Starting to fetch data for 18 movies
+2025-12-15 17:21:45,069 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 299534
+2025-12-15 17:21:45,815 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 19995
+2025-12-15 17:21:46,450 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 140607
+2025-12-15 17:21:47,153 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 299536
+2025-12-15 17:21:47,804 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 597
+2025-12-15 17:21:48,473 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 135397
+2025-12-15 17:21:49,074 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 420818
+2025-12-15 17:21:49,813 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 24428
+2025-12-15 17:21:50,467 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 168259
+2025-12-15 17:21:51,183 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 99861
+2025-12-15 17:21:51,838 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 284054
+2025-12-15 17:21:52,481 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 12445
+2025-12-15 17:21:53,094 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 181808
+2025-12-15 17:21:53,712 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 330457
+2025-12-15 17:21:54,330 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 351286
+2025-12-15 17:21:54,958 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 109445
+2025-12-15 17:21:55,593 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 321612
+2025-12-15 17:21:56,208 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 260513
+2025-12-15 17:21:56,460 - INFO - src.extraction.fetch_data - Fetched data for 18 movies
+2025-12-15 17:21:56,469 - INFO - src.extraction.fetch_data - Created DataFrame with 18 rows and 27 columns
+2025-12-15 17:21:56,519 - INFO - src.extraction.fetch_data - Saved raw data to c:\Users\CourageDei\Desktop\Moodle\DE\DE02\notebook\..\src\extraction\../../data/raw\movies.json
+2025-12-15 17:21:56,521 - INFO - src.extraction.fetch_data - fetch_data.py completed successfully in 12.12 seconds
+2025-12-15 17:22:05,512 - INFO - src.transformation.process - Starting process.py script
+2025-12-15 17:22:05,617 - INFO - src.transformation.process - Loaded raw data from c:\Users\CourageDei\Desktop\Moodle\DE\DE02\notebook\..\src\transformation\../../data/raw\movies.json with 18 rows
+2025-12-15 17:22:05,625 - INFO - src.transformation.process - Dropped irrelevant columns: ['adult', 'imdb_id', 'original_title', 'video', 'homepage']
+2025-12-15 17:22:05,632 - INFO - src.transformation.process - Extracted and cleaned JSON-like columns: ['belongs_to_collection', 'genres', 'spoken_languages', 'production_countries', 'production_companies', 'credits']
+2025-12-15 17:22:05,643 - INFO - src.transformation.process - Converted column data types
+2025-12-15 17:22:05,675 - INFO - src.transformation.process - Filtered to 18 released movies
+2025-12-15 17:22:05,730 - INFO - src.transformation.process - process.py completed successfully in 0.22 seconds
+2025-12-15 17:22:09,761 - INFO - src.transformation.analysis - Starting analysis.py script
+2025-12-15 17:22:09,770 - INFO - src.transformation.analysis - Loaded cleaned data from c:\Users\CourageDei\Desktop\Moodle\DE\DE02\notebook\..\src\transformation\../../data/processed\movies_clean.csv with 18 rows
+2025-12-15 17:22:09,774 - INFO - src.transformation.analysis - Calculated KPIs: profit_musd and roi
+2025-12-15 17:22:09,894 - INFO - src.transformation.analysis - Completed movie rankings
+2025-12-15 17:22:10,056 - INFO - src.transformation.analysis - Completed franchise and director analysis
+2025-12-15 17:22:10,058 - INFO - src.transformation.analysis - analysis.py completed successfully in 0.29 seconds
+2025-12-15 17:29:43,241 - INFO - src.visualization - Starting visualization.py script
+2025-12-15 17:29:43,249 - INFO - src.visualization - Loaded cleaned data from c:\Users\CourageDei\Desktop\Moodle\DE\DE02\notebook\..\src\../data/processed\movies_clean.csv with 18 rows
+2025-12-15 17:29:43,268 - INFO - src.visualization - Prepared data for visualization
+2025-12-15 17:29:43,875 - INFO - src.visualization - Generated Revenue vs. Budget scatter plot
+2025-12-15 17:29:44,593 - INFO - src.visualization - Generated ROI Distribution by Genre bar chart
+2025-12-15 17:29:44,615 - INFO - src.visualization - Generated ROI Distribution by Genre bar chart
+2025-12-15 17:29:45,286 - INFO - src.visualization - Generated Popularity vs. Rating scatter plot
+2025-12-15 17:29:48,065 - INFO - src.visualization - Generated Yearly Trends line chart
+2025-12-15 17:29:49,843 - INFO - src.visualization - Generated Franchise vs. Standalone bar chart
+2025-12-15 17:29:49,847 - INFO - src.visualization - visualization.py completed successfully in 6.60 seconds
+2025-12-15 17:34:37,038 - INFO - __main__ - Starting fetch_data.py script
+2025-12-15 17:34:37,039 - INFO - __main__ - API key loaded successfully
+2025-12-15 17:34:37,040 - INFO - __main__ - Starting to fetch data for 18 movies
+2025-12-15 20:35:34,427 - INFO - __main__ - Starting fetch_data.py script
+2025-12-15 20:35:34,428 - INFO - __main__ - API key loaded successfully
+2025-12-15 20:35:34,428 - INFO - __main__ - Starting to fetch data for 18 movies
+2025-12-15 20:35:53,251 - INFO - __main__ - Starting fetch_data.py script
+2025-12-15 20:35:53,252 - INFO - __main__ - API key loaded successfully
+2025-12-15 20:35:53,252 - INFO - __main__ - Starting to fetch data for 18 movies
+2025-12-16 07:32:18,051 - INFO - __main__ - Starting fetch_data.py script
+2025-12-16 07:32:18,062 - INFO - __main__ - API key loaded successfully
+2025-12-16 07:32:18,062 - INFO - __main__ - Starting to fetch data for 18 movies
+2025-12-16 08:00:42,453 - INFO - __main__ - Starting fetch_data.py script
+2025-12-16 08:00:42,466 - INFO - __main__ - API key loaded successfully
+2025-12-16 08:00:42,466 - INFO - __main__ - Starting to fetch data for 18 movies
+2025-12-16 08:40:52,585 - INFO - __main__ - Starting fetch_data.py script
+2025-12-16 08:40:52,588 - INFO - __main__ - API key loaded successfully
+2025-12-16 08:40:52,588 - INFO - __main__ - Starting to fetch data for 18 movies
+2026-01-07 17:19:57,889 - INFO - src.extraction.fetch_data - Starting fetch_data.py script
+2026-01-07 17:19:57,920 - INFO - src.extraction.fetch_data - API key loaded successfully
+2026-01-07 17:19:57,922 - INFO - src.extraction.fetch_data - Starting to fetch data for 18 movies
+2026-01-07 17:19:58,775 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 299534
+2026-01-07 17:19:59,569 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 19995
+2026-01-07 17:20:00,263 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 140607
+2026-01-07 17:20:01,062 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 299536
+2026-01-07 17:20:01,967 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 597
+2026-01-07 17:20:02,669 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 135397
+2026-01-07 17:20:03,475 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 420818
+2026-01-07 17:20:04,236 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 24428
+2026-01-07 17:20:04,933 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 168259
+2026-01-07 17:20:05,748 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 99861
+2026-01-07 17:20:06,549 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 284054
+2026-01-07 17:20:07,227 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 12445
+2026-01-07 17:20:07,997 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 181808
+2026-01-07 17:20:08,769 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 330457
+2026-01-07 17:20:09,470 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 351286
+2026-01-07 17:20:10,231 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 109445
+2026-01-07 17:20:10,995 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 321612
+2026-01-07 17:20:11,692 - INFO - src.extraction.fetch_data - Successfully fetched movie ID 260513
+2026-01-07 17:20:11,944 - INFO - src.extraction.fetch_data - Fetched data for 18 movies
+2026-01-07 17:20:11,952 - INFO - src.extraction.fetch_data - Created DataFrame with 18 rows and 27 columns
+2026-01-07 17:20:11,988 - INFO - src.extraction.fetch_data - Saved raw data to c:\Users\CourageDei\Desktop\Moodle\DE\DE02\notebook\..\src\extraction\../../data/raw\movies.json
+2026-01-07 17:20:11,989 - INFO - src.extraction.fetch_data - fetch_data.py completed successfully in 14.10 seconds
+2026-01-07 17:20:12,148 - INFO - src.transformation.process - Starting process.py script
+2026-01-07 17:20:12,242 - INFO - src.transformation.process - Loaded raw data from c:\Users\CourageDei\Desktop\Moodle\DE\DE02\notebook\..\src\transformation\../../data/raw\movies.json with 18 rows
+2026-01-07 17:20:12,252 - INFO - src.transformation.process - Dropped irrelevant columns: ['adult', 'imdb_id', 'original_title', 'video', 'homepage']
+2026-01-07 17:20:12,257 - INFO - src.transformation.process - Extracted and cleaned JSON-like columns: ['belongs_to_collection', 'genres', 'spoken_languages', 'production_countries', 'production_companies', 'credits']
+2026-01-07 17:20:12,268 - INFO - src.transformation.process - Converted column data types
+2026-01-07 17:20:12,296 - INFO - src.transformation.process - Filtered to 18 released movies
+2026-01-07 17:20:12,341 - INFO - src.transformation.process - process.py completed successfully in 0.19 seconds
+2026-01-07 17:20:12,405 - INFO - src.transformation.analysis - Starting analysis.py script
+2026-01-07 17:20:12,411 - INFO - src.transformation.analysis - Loaded cleaned data from c:\Users\CourageDei\Desktop\Moodle\DE\DE02\notebook\..\src\transformation\../../data/processed\movies_clean.csv with 18 rows
+2026-01-07 17:20:12,415 - INFO - src.transformation.analysis - Calculated KPIs: profit_musd and roi
+2026-01-07 17:20:12,464 - INFO - src.transformation.analysis - Completed movie rankings
+2026-01-07 17:20:12,568 - INFO - src.transformation.analysis - Completed franchise and director analysis
+2026-01-07 17:20:12,569 - INFO - src.transformation.analysis - analysis.py completed successfully in 0.16 seconds

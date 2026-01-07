@@ -1,355 +1,123 @@
 import os
-import pandas as pd
-import numpy as np
-from tabulate import tabulate
-import json
 import logging
-import time
+import json
+import numpy as np
+import pandas as pd
+from typing import List, Optional, Union
 
-# Configure logging
-logs_dir = os.path.join(os.path.dirname(__file__), "../../logs")
-os.makedirs(logs_dir, exist_ok=True)
-log_file = os.path.join(logs_dir, "analysis.log")
-logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s - %(levelname)s - %(name)s - %(message)s',
-    handlers=[
-        logging.StreamHandler(),
-        logging.FileHandler(log_file)
-    ]
-)
-logger = logging.getLogger(__name__)
-
-logger.info("Starting analysis.py script")
-
-start_time = time.time()
-
-# Load cleaned data
-data_dir = os.path.join(os.path.dirname(__file__), "../../data/processed")
-input_path = os.path.join(data_dir, "movies_clean.csv")
-df_movie = pd.read_csv(input_path)
-logger.info(f"Loaded cleaned data from {input_path} with {len(df_movie)} rows")
-
-# Profit = Revenue - Budget
-df_movie['profit_musd'] = df_movie['revenue_musd'] - df_movie['budget_musd']
-
-# ROI = Revenue / Budget
-df_movie['roi'] = df_movie['revenue_musd'] / df_movie['budget_musd']
-
-print("KPIs Calculated: ")
-
-logger.info("Calculated KPIs: profit_musd and roi")
-
-# RANKING LOGIC
-
-
-def print_ranking(title, df, sort_col, ascending=False, top_n=1, cols_to_show=None):
+class MovieAnalyzer:
     """
-    Prints a ranking of movies based on a specified column, with optional formatting.
-
-    :param title: Title of the ranking to display.
-    :param df: DataFrame containing movie data.
-    :param sort_col: Column name to use for sorting the ranking.
-    :param ascending: Boolean indicating the sort order. 
-                      If True, sorts in ascending order; otherwise, descending. Default is False.
-    :param top_n: Number of top entries to display. Default is 1.
-    :param cols_to_show: List of columns to include in the output. 
-                         If None, defaults to ['title', 'budget_musd', 'revenue_musd', 
-                         'profit_musd', 'roi', 'vote_average'].
+    Expert-level analyzer that implements all Step 3 KPI and 
+    Advanced Search requirements.
     """
-    if cols_to_show is None:
-        cols_to_show = ['title', 'budget_musd', 'revenue_musd',
-                        'profit_musd', 'roi', 'vote_average']
-    if sort_col not in df.columns:
-        print(f"Skipping {title}: Column {sort_col} not found.")
-        return
-    # Sort
-    ranked = df.sort_values(by=sort_col, ascending=ascending).head(top_n)
-    print(f"\n {title} ")
-    print(ranked[cols_to_show].to_string(index=False))
-
-    # Tabulted Output
-    print(f"\n{title}")
-    print(tabulate(
-        ranked[cols_to_show],
-        headers=cols_to_show,
-        tablefmt="github",
-        showindex=False
-    ))
-
-
-# 1. Highest Revenue
-print_ranking("Highest Revenue", df_movie, 'revenue_musd')
-
-# 2. Highest Budget
-print_ranking("Highest Budget", df_movie, 'budget_musd')
-
-# 3. Highest Profit
-print_ranking("Highest Profit", df_movie, 'profit_musd')
-
-# 4. Lowest Profit
-print_ranking("Lowest Profit", df_movie, 'profit_musd', ascending=True)
-
-# 5. Highest ROI (Budget >= 10M)
-high_budget_mask = df_movie['budget_musd'] >= 10
-print_ranking("Highest ROI (Budget >= 10M)", df_movie[high_budget_mask], 'roi')
-
-# 6. Lowest ROI (Budget >= 10M)
-print_ranking("Lowest ROI (Budget >= 10M)",
-              df_movie[high_budget_mask], 'roi', ascending=True)
-
-# 7. Most Voted Movies
-print_ranking("Most Voted Movies", df_movie, 'vote_count',
-              cols_to_show=['title', 'vote_count', 'vote_average'])
-
-# RATING RANKINGS
-
-# 8. Highest Rated (Votes >= 10)
-valid_votes_mask = df_movie['vote_count'] >= 10
-print_ranking("Highest Rated (Votes >= 10)", df_movie[valid_votes_mask], 'vote_average', cols_to_show=[
-              'title', 'vote_average', 'vote_count'])
-
-# 9. Lowest Rated (Votes >= 10)
-print_ranking("Lowest Rated (Votes >= 10)", df_movie[valid_votes_mask], 'vote_average', ascending=True, cols_to_show=[
-              'title', 'vote_average', 'vote_count'])
-
-# 10. Most Popular
-print_ranking("Most Popular Movies", df_movie, 'popularity',
-              cols_to_show=['title', 'popularity', 'genres'])
-
-logger.info("Completed movie rankings")
-
-# extract cast and director
-
-
-def get_cast(credits_data):
-    """
-    Extracts the top 5 cast members' names from the credits data.
-
-    :param credits_data: A dictionary containing cast information with a 'cast' key 
-                         that holds a list of cast members, each with a 'name' field.
-    :return: A string containing the names of the top 5 cast members, separated by '|', 
-             or NaN if the data is invalid or the 'cast' key is missing.
-    """
-    # Extracts top 5 actors from the credits dictionary.
-    if isinstance(credits_data, dict) and 'cast' in credits_data:
-        actors = [x['name'] for x in credits_data['cast'][:5]]
-        return "|".join(actors)
-    return np.nan
-
-
-def get_director(credits_data):
-    """
-    Extracts the director's name(s) from the credits data.
-
-    :param credits_data: A dictionary containing crew information with a 'crew' key 
-                         that holds a list of crew members, each with 'name' and 'job' fields.
-    :return: A string containing the name(s) of the director(s), separated by '|', 
-             or an empty string if no director is found.
-    """
-    # Extracts the Director's name from the credits dictionary.
-    if isinstance(credits_data, dict) and 'crew' in credits_data:
-        directors = [x['name']
-                     for x in credits_data['crew'] if x.get('job') == 'Director']
-        return "|".join(directors)
-    return np.nan
-
-
-print(" Populating Cast & Director ")
-# We apply this to the raw 'credits' column
-df_movie['cast'] = df_movie['credits'].apply(get_cast)
-df_movie['director'] = df_movie['credits'].apply(get_director)
-
-print("Sample Extraction:")
-print(df_movie[['title', 'director', 'cast']].head(3))
-
-# UDF - User-Defined Function (UDF)
-
-
-def rank_movies(df, criteria_col, ascending=False, top_n=5, show_cols=None):
-    """
-    Docstring for rank_movies
     
-    :param df: DataFrame containing movie data.
-    :param criteria_col: Column name to use for ranking the movies.
-    :param ascending: Boolean indicating the sort order. 
-                      If True, sorts in ascending order; otherwise, descending. Default is False.
-    :param top_n: Number of top movies to return. Default is 5.
-    :param show_cols: List of columns to include in the output. 
-                      If None, defaults to ['title', criteria_col, 'genres', 'director', 'cast'].
+    def __init__(self, cleaned_csv_path: str):
+        self.logger = logging.getLogger(self.__class__.__name__)
+        
+        if not os.path.exists(cleaned_csv_path):
+            self.logger.error(f"Cleaned data missing: {cleaned_csv_path}")
+            raise FileNotFoundError(f"Ensure process.py has run first.")
+            
+        self.df = pd.read_csv(cleaned_csv_path)
+        self.logger.info(f"Loaded {len(self.df)} rows from cleaned CSV.")
+        self._calculate_base_kpis()
 
-    :return: DataFrame containing the top-ranked movies based on the specified criteria.
-    """
-    if show_cols is None:
-        show_cols = ['title', criteria_col, 'genres', 'director', 'cast']
+    def _calculate_base_kpis(self) -> None:
+        """Requirement 1: KPI Implementation (Profit & ROI)."""
+        if 'profit_musd' not in self.df.columns:
+            self.df['profit_musd'] = self.df['revenue_musd'] - self.df['budget_musd']
+        
+        if 'roi' not in self.df.columns:
+            # ROI = Revenue / Budget
+            self.df['roi'] = np.where(
+                self.df['budget_musd'] > 0, 
+                self.df['revenue_musd'] / self.df['budget_musd'], 
+                np.nan
+            )
+        self.logger.info("KPIs verified.")
 
-    # Error handling: check if column exists
-    if criteria_col not in df.columns:
-        return f"Error: Column '{criteria_col}' not found."
+    def enrich_with_credits(self, raw_json_path: str) -> None:
+        """Requirement 3: Merging for Advanced Filtering (Actor/Director)."""
+        with open(raw_json_path, 'r') as f:
+            raw_data = json.load(f)
+        
+        df_credits = pd.DataFrame(raw_data)[['id', 'credits']]
+        self.df = pd.merge(self.df, df_credits, on='id', how='left')
+        
+        self.df['cast'] = self.df['credits'].apply(self._extract_cast)
+        self.df['director'] = self.df['credits'].apply(self._extract_director)
+        self.df.drop(columns=['credits'], inplace=True)
+        self.logger.info("Enriched cleaned data with cast/director features.")
 
-    # Sort and slice
-    ranked_df = df.sort_values(
-        by=criteria_col, ascending=ascending).head(top_n)
+    @staticmethod
+    def _extract_cast(credits_data: Union[dict, float, None]) -> str:
+        if isinstance(credits_data, dict) and 'cast' in credits_data:
+            return "|".join([x['name'] for x in credits_data['cast'][:5]])
+        return ""
 
-    return ranked_df[show_cols]
+    @staticmethod
+    def _extract_director(credits_data: Union[dict, float, None]) -> str:
+        if isinstance(credits_data, dict) and 'crew' in credits_data:
+            return "|".join([x['name'] for x in credits_data['crew'] if x.get('job') == 'Director'])
+        return ""
 
+    # --- REQUIREMENT 2: UDF FOR RANKING ---
+    def rank_movies(self, 
+                    criteria_col: str, 
+                    ascending: bool = False, 
+                    top_n: int = 5, 
+                    mask: Optional[pd.Series] = None,
+                    show_cols: Optional[List[str]] = None) -> pd.DataFrame:
+        """User-Defined Function (UDF) to streamline ranking operations."""
+        target_df = self.df[mask] if mask is not None else self.df
+        
+        if show_cols is None:
+            show_cols = ['title', criteria_col, 'genres', 'revenue_musd', 'profit_musd', 'roi', 'vote_average']
+            
+        ranked = target_df.sort_values(by=criteria_col, ascending=ascending).head(top_n)
+        return ranked[[c for c in show_cols if c in ranked.columns]]
 
-# 1. LOAD CLEAN DATA
-df_clean = df_movie
+    # --- REQUIREMENT 4: FRANCHISE VS STANDALONE ---
+    def get_franchise_comparison(self) -> pd.DataFrame:
+        """Compare franchises vs standalone movies across multiple means."""
+        self.df['is_franchise'] = self.df['belongs_to_collection'].notna()
+        
+        stats = self.df.groupby('is_franchise').agg({
+            'revenue_musd': 'mean',
+            'roi': 'median',
+            'budget_musd': 'mean',
+            'popularity': 'mean',
+            'vote_average': 'mean',
+            'title': 'count'
+        }).rename(columns={'title': 'movie_count'})
+        
+        label_map = {False: 'Standalone', True: 'Franchise'}
+        stats.index = stats.index.map(label_map)
+        return stats.round(2)
 
-# 2. DROP EXISTING 'CREDITS'
-if 'credits' in df_clean.columns:
-    df_clean.drop(columns=['credits'], inplace=True)
+    # --- REQUIREMENT 5: SUCCESSFUL FRANCHISES ---
+    def get_most_successful_franchises(self, top_n: int = 5) -> pd.DataFrame:
+        """Rank franchises by total revenue and counts."""
+        franchise_df = self.df[self.df['belongs_to_collection'].notna()]
+        
+        success = franchise_df.groupby('belongs_to_collection').agg({
+            'title': 'count',
+            'budget_musd': ['sum', 'mean'],
+            'revenue_musd': ['sum', 'mean'],
+            'vote_average': 'mean'
+        })
+        
+        # Flatten MultiIndex columns
+        success.columns = ['_'.join(col).strip() for col in success.columns.values]
+        return success.sort_values(by='revenue_musd_sum', ascending=False).head(top_n).round(2)
 
-# 3. PREPARE CREDITS DATA
-data_dir = os.path.join(os.path.dirname(__file__), "../../data/raw")
-input_path = os.path.join(data_dir, "movies.json")
-with open(input_path, 'r') as f:
-    selected_movie_ids = json.load(f)
-df_credits = pd.DataFrame(selected_movie_ids)[['id', 'credits']]
-
-# 4. MERGE
-df_movie = pd.merge(df_clean, df_credits, on='id', how='left')
-
-# 5. DEFINE EXTRACTION FUNCTIONS
-
-
-def get_cast(credits_data):
-    """
-    Docstring for get_cast
-    
-    :param credits_data:  A dictionary containing cast information with a 'cast' key that
-    holds a list of cast members, each with a 'name' field.
-    """
-    if isinstance(credits_data, dict) and 'cast' in credits_data:
-        actors = [x['name'] for x in credits_data['cast'][:5]]
-        return "|".join(actors)
-    return ""
-
-
-def get_director(credits_data):
-    """
-    Docstring for get_director
-    
-    :param credits_data: A dictionary containing crew information with a 'crew' key that
-    holds a list of crew members, each with 'name' and 'job' fields.
-    """
-    if isinstance(credits_data, dict) and 'crew' in credits_data:
-        directors = [x['name']
-                     for x in credits_data['crew'] if x.get('job') == 'Director']
-        return "|".join(directors)
-    return ""
-
-
-print("Repopulating Cast & Director")
-
-# 6. APPLY EXTRACTION
-df_movie['cast'] = df_movie['credits'].apply(get_cast)
-df_movie['director'] = df_movie['credits'].apply(get_director)
-
-# Verification
-print(df_movie[['title', 'cast', 'director']].head())
-
-# Search 1
-print("\nSearch 1: Bruce Willis (Sci-Fi / Action) ")
-# 1. Create the Boolean Mask
-search_1 = (
-    df_movie['genres'].str.contains("Science Fiction", na=False) &
-    df_movie['genres'].str.contains("Action", na=False) &
-    df_movie['cast'].str.contains("Bruce Willis", na=False)
-)
-
-# 2. Apply Filter
-bruce_movies = df_movie[search_1]
-
-# 3. Rank Results
-if not bruce_movies.empty:
-    print(rank_movies(bruce_movies, criteria_col='vote_average', ascending=False))
-else:
-    print("No movies found for this criteria.")
-
-# Search 2
-print("\nSearch 2: Uma Thurman & Quentin Tarantino ")
-
-# 1. Create the Boolean Mask
-search_2 = (
-    df_movie['cast'].str.contains("Uma Thurman", na=False) &
-    df_movie['director'].str.contains("Quentin Tarantino", na=False)
-)
-
-# 2. Apply Filter
-qt_movies = df_movie[search_2]
-
-# 3. Rank Results (Sorted by runtime ascending)
-if not qt_movies.empty:
-    print(rank_movies(qt_movies, criteria_col='runtime', ascending=True))
-else:
-    print("No movies found for this criteria.")
-
-# Re-calculate KPI
-df_movie['profit_musd'] = df_movie['revenue_musd'] - df_movie['budget_musd']
-df_movie['roi'] = df_movie['revenue_musd'] / df_movie['budget_musd']
-
-# 1. Create a "Franchise" Flag
-# If belongs_to_collection has text, it's a Franchise. else it's Standalone.
-df_movie['is_franchise'] = df_movie['belongs_to_collection'].notna()
-
-# 2. Group and Aggregate
-franchise_stats = df_movie.groupby('is_franchise').agg({
-    'revenue_musd': 'mean',
-    'roi': 'median',
-    'budget_musd': 'mean',
-    'popularity': 'mean',
-    'vote_average': 'mean',
-    'title': 'count'          # To see how many movies are in each category
-}).rename(columns={'title': 'movie_count'})
-
-# Rename the index for clarity
-franchise_stats.index = ['Standalone', 'Franchise']
-
-print("Category", franchise_stats.round(2))
-
-print("\n 5. Most Successful Franchises ")
-
-# Group by Collection Name
-franchise_ranking = df_movie.groupby('belongs_to_collection').agg({
-    'title': 'count',
-    'budget_musd': ['sum', 'mean'],
-    'revenue_musd': ['sum', 'mean'],
-    'vote_average': 'mean'
-})
-
-# Flatten the MultiIndex columns (e.g., ('budget_musd', 'sum') -> 'budget_sum')
-franchise_ranking.columns = ['_'.join(col).strip()
-                             for col in franchise_ranking.columns.values]
-franchise_ranking.rename(columns={'title_count': 'total_movies'}, inplace=True)
-
-# Sort by Total Revenue (Descending)
-top_franchises = franchise_ranking.sort_values(
-    by='revenue_musd_sum', ascending=False)
-
-print(top_franchises.head(5).round(2))
-
-print("\n 6. Most Successful Directors ")
-
-# Group by Director
-director_ranking = df_movie[df_movie['director'] != ""].groupby('director').agg({
-    'title': 'count',
-    'revenue_musd': 'sum',
-    'vote_average': 'mean'
-})
-
-director_ranking.rename(
-    columns={'title': 'total_movies', 'revenue_musd': 'total_revenue'}, inplace=True)
-
-# Sort by Total Revenue (Descending)
-top_directors = director_ranking.sort_values(
-    by='total_revenue', ascending=False)
-
-print(top_directors.head(5).round(2))
-
-logger.info("Completed franchise and director analysis")
-
-end_time = time.time()
-logger.info(
-    f"analysis.py completed successfully in {end_time - start_time:.2f} seconds")
+    # --- REQUIREMENT 6: SUCCESSFUL DIRECTORS ---
+    def get_most_successful_directors(self, top_n: int = 5) -> pd.DataFrame:
+        """Rank directors by total revenue and movie count."""
+        success = self.df[self.df['director'] != ""].groupby('director').agg({
+            'title': 'count',
+            'revenue_musd': 'sum',
+            'vote_average': 'mean'
+        }).rename(columns={'title': 'total_movies', 'revenue_musd': 'total_revenue'})
+        
+        return success.sort_values(by='total_revenue', ascending=False).head(top_n).round(2)

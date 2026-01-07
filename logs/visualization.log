@@ -8,3 +8,33 @@
 2025-12-15 14:31:05,381 - INFO - __main__ - Generated Yearly Trends line chart
 2025-12-15 14:31:07,711 - INFO - __main__ - Generated Franchise vs. Standalone bar chart
 2025-12-15 14:31:07,712 - INFO - __main__ - visualization.py completed successfully in 13.05 seconds
+2025-12-15 20:11:43,536 - INFO - __main__ - Starting visualization.py script
+2025-12-15 20:11:43,566 - INFO - __main__ - Loaded cleaned data from c:\Users\CourageDei\Desktop\Moodle\DE\DE02\src\../data/processed\movies_clean.csv with 18 rows
+2025-12-15 20:11:43,591 - INFO - __main__ - Prepared data for visualization
+2025-12-15 20:12:06,983 - INFO - __main__ - Generated Revenue vs. Budget scatter plot
+2025-12-15 20:13:21,481 - INFO - __main__ - Generated ROI Distribution by Genre bar chart
+2025-12-15 20:13:21,512 - INFO - __main__ - Generated ROI Distribution by Genre bar chart
+2025-12-15 20:13:27,935 - INFO - __main__ - Generated Popularity vs. Rating scatter plot
+2025-12-15 20:16:41,370 - INFO - __main__ - Generated Yearly Trends line chart
+2025-12-15 20:18:53,650 - INFO - __main__ - Generated Franchise vs. Standalone bar chart
+2025-12-15 20:18:53,651 - INFO - __main__ - visualization.py completed successfully in 430.11 seconds
+2025-12-16 07:33:05,143 - INFO - __main__ - Starting visualization.py script
+2025-12-16 07:33:05,151 - INFO - __main__ - Loaded cleaned data from c:\Users\CourageDei\Desktop\Moodle\DE\DE02\src\../data/processed\movies_clean.csv with 18 rows
+2025-12-16 07:33:05,157 - INFO - __main__ - Prepared data for visualization
+2025-12-16 07:39:00,963 - INFO - __main__ - Generated Revenue vs. Budget scatter plot
+2025-12-16 07:39:02,574 - INFO - __main__ - Generated ROI Distribution by Genre bar chart
+2025-12-16 07:39:02,574 - INFO - __main__ - Generated ROI Distribution by Genre bar chart
+2025-12-16 07:39:03,897 - INFO - __main__ - Generated Popularity vs. Rating scatter plot
+2025-12-16 07:39:05,667 - INFO - __main__ - Generated Yearly Trends line chart
+2025-12-16 07:39:07,476 - INFO - __main__ - Generated Franchise vs. Standalone bar chart
+2025-12-16 07:39:07,476 - INFO - __main__ - visualization.py completed successfully in 362.33 seconds
+2025-12-16 08:41:31,411 - INFO - __main__ - Starting visualization.py script
+2025-12-16 08:41:31,431 - INFO - __main__ - Loaded cleaned data from c:\Users\CourageDei\Desktop\Moodle\DE\DE02\src\../data/processed\movies_clean.csv with 18 rows
+2025-12-16 08:41:31,473 - INFO - __main__ - Prepared data for visualization
+2025-12-16 08:41:40,854 - INFO - __main__ - Generated Revenue vs. Budget scatter plot
+2025-12-16 08:41:43,104 - INFO - __main__ - Generated ROI Distribution by Genre bar chart
+2025-12-16 08:41:43,119 - INFO - __main__ - Generated ROI Distribution by Genre bar chart
+2025-12-16 08:41:44,659 - INFO - __main__ - Generated Popularity vs. Rating scatter plot
+2025-12-16 08:41:47,995 - INFO - __main__ - Generated Yearly Trends line chart
+2025-12-16 08:41:50,780 - INFO - __main__ - Generated Franchise vs. Standalone bar chart
+2025-12-16 08:41:50,819 - INFO - __main__ - visualization.py completed successfully in 19.41 seconds

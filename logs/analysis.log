@@ -10,3 +10,27 @@
 2025-12-15 14:30:48,138 - INFO - __main__ - Completed movie rankings
 2025-12-15 14:30:48,213 - INFO - __main__ - Completed franchise and director analysis
 2025-12-15 14:30:48,213 - INFO - __main__ - analysis.py completed successfully in 0.12 seconds
+2025-12-15 17:35:19,560 - INFO - __main__ - Starting analysis.py script
+2025-12-15 17:35:19,570 - INFO - __main__ - Loaded cleaned data from c:\Users\CourageDei\Desktop\Moodle\DE\DE02\src\transformation\../../data/processed\movies_clean.csv with 18 rows
+2025-12-15 17:35:19,573 - INFO - __main__ - Calculated KPIs: profit_musd and roi
+2025-12-15 17:35:19,652 - INFO - __main__ - Completed movie rankings
+2025-12-15 17:35:19,828 - INFO - __main__ - Completed franchise and director analysis
+2025-12-15 17:35:19,828 - INFO - __main__ - analysis.py completed successfully in 0.27 seconds
+2025-12-16 07:32:35,994 - INFO - __main__ - Starting analysis.py script
+2025-12-16 07:32:36,016 - INFO - __main__ - Loaded cleaned data from c:\Users\CourageDei\Desktop\Moodle\DE\DE02\src\transformation\../../data/processed\movies_clean.csv with 18 rows
+2025-12-16 07:32:36,018 - INFO - __main__ - Calculated KPIs: profit_musd and roi
+2025-12-16 07:32:36,055 - INFO - __main__ - Completed movie rankings
+2025-12-16 07:32:36,161 - INFO - __main__ - Completed franchise and director analysis
+2025-12-16 07:32:36,161 - INFO - __main__ - analysis.py completed successfully in 0.17 seconds
+2025-12-16 08:01:32,144 - INFO - __main__ - Starting analysis.py script
+2025-12-16 08:01:32,169 - INFO - __main__ - Loaded cleaned data from c:\Users\CourageDei\Desktop\Moodle\DE\DE02\src\transformation\../../data/processed\movies_clean.csv with 18 rows
+2025-12-16 08:01:32,171 - INFO - __main__ - Calculated KPIs: profit_musd and roi
+2025-12-16 08:01:32,231 - INFO - __main__ - Completed movie rankings
+2025-12-16 08:01:32,334 - INFO - __main__ - Completed franchise and director analysis
+2025-12-16 08:01:32,334 - INFO - __main__ - analysis.py completed successfully in 0.19 seconds
+2025-12-16 08:41:14,799 - INFO - __main__ - Starting analysis.py script
+2025-12-16 08:41:14,859 - INFO - __main__ - Loaded cleaned data from c:\Users\CourageDei\Desktop\Moodle\DE\DE02\src\transformation\../../data/processed\movies_clean.csv with 18 rows
+2025-12-16 08:41:14,865 - INFO - __main__ - Calculated KPIs: profit_musd and roi
+2025-12-16 08:41:15,098 - INFO - __main__ - Completed movie rankings
+2025-12-16 08:41:15,631 - INFO - __main__ - Completed franchise and director analysis
+2025-12-16 08:41:15,632 - INFO - __main__ - analysis.py completed successfully in 0.83 seconds
