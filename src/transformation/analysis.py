@@ -12,6 +12,9 @@ class MovieAnalyzer:
     """
     
     def __init__(self, cleaned_csv_path: str):
+        """
+        Initialize the MovieAnalyzer with cleaned data.
+        """
         self.logger = logging.getLogger(self.__class__.__name__)
         
         if not os.path.exists(cleaned_csv_path):

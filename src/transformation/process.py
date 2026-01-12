@@ -103,6 +103,9 @@ class MovieTransformer:
         return df
 
     def _save_to_csv(self, df: pd.DataFrame):
+        """
+        Saves the cleaned DataFrame to a CSV file in the processed data directory.
+        """
         output_path = os.path.join(self.processed_data_dir, "movies_clean.csv")
         df.to_csv(output_path, index=False)
         self.logger.info(f"Cleaned data saved to {output_path}")
